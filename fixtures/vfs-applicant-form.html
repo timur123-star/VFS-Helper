@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>VFS Global — Application form (demo fixture)</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { font-family: "Segoe UI", Roboto, Arial, sans-serif; margin: 0; background: #f4f6f8; color: #1a1a1a; }
+    header { background: #003b71; color: #fff; padding: 16px 24px; }
+    header h1 { margin: 0; font-size: 1.25rem; font-weight: 600; }
+    header p { margin: 4px 0 0; opacity: 0.85; font-size: 0.9rem; }
+    main { max-width: 720px; margin: 0 auto; padding: 24px 16px 80px; }
+    section { background: #fff; border: 1px solid #dde3ea; border-radius: 8px;
+               padding: 20px 24px; margin-bottom: 20px; box-shadow: 0 1px 3px rgba(0,0,0,.06); }
+    section h2 { margin: 0 0 16px; font-size: 1.05rem; color: #003b71;
+                 border-bottom: 1px solid #e8ecf0; padding-bottom: 8px; }
+    .row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 14px; }
+    .row.full { grid-template-columns: 1fr; }
+    label { display: block; font-size: 0.8rem; color: #555; margin-bottom: 4px; }
+    input[type="text"], input[type="email"], input[type="tel"], input[type="password"],
+    select, textarea {
+      width: 100%; padding: 8px 10px; border: 1px solid #c5cdd8; border-radius: 4px;
+      font-size: 0.95rem;
+    }
+    input:focus, select:focus { outline: 2px solid #003b71; border-color: #003b71; }
+    .check-row { margin: 10px 0; }
+    .check-row label { display: flex; align-items: flex-start; gap: 8px; font-size: 0.9rem; color: #333; }
+    fieldset { border: 1px solid #e0e5eb; border-radius: 4px; padding: 12px 16px; margin: 0 0 14px; }
+    legend { font-size: 0.85rem; color: #555; padding: 0 4px; }
+    fieldset label { display: inline-flex; align-items: center; gap: 6px; margin-right: 20px;
+                     font-size: 0.9rem; color: #333; }
+    .autocomplete-search-box { position: relative; width: 100%; }
+    .autocomplete-search-box .input-wrapper input.search-input { width: 100%; padding: 8px 10px; }
+    .autocomplete-search-box .selected-wrapper {
+      position: absolute; top: 0; left: 0; right: 36px; background: #fff; padding: 8px 10px;
+      border: 1px solid #c5cdd8; border-radius: 4px 0 0 4px; height: 36px; pointer-events: auto;
+    }
+    .autocomplete-search-box .selected { color: #888; line-height: 20px; }
+    .autocomplete-search-box .selected.has-value { color: #000; }
+    .autocomplete-search-box .toggle-button-wrapper {
+      position: absolute; top: 0; right: 0; width: 36px; height: 36px; cursor: pointer;
+      background: #eef2f6; border: 1px solid #c5cdd8; border-radius: 0 4px 4px 0;
+      text-align: center; line-height: 34px;
+    }
+    .autocomplete-search-box .list-wrapper {
+      position: absolute; top: 38px; left: 0; right: 0; max-height: 180px; overflow-y: auto;
+      background: #fff; border: 1px solid #c5cdd8; display: none; z-index: 10;
+    }
+    .autocomplete-search-box .list-wrapper.open { display: block; }
+    .autocomplete-search-box ul { list-style: none; padding: 0; margin: 0; }
+    .autocomplete-search-box li { padding: 8px 10px; cursor: pointer; }
+    .autocomplete-search-box li:hover { background: #eef4fb; }
+    .hint { font-size: 0.75rem; color: #888; margin-top: 24px; text-align: center; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>VFS Global — Visa application</h1>
+    <p>Belarus → Poland · Visa application (Angular form layout)</p>
+  </header>
+  <main>
+    <section id="login-section">
+      <h2>Step 1 — Sign in</h2>
+      <div class="row full">
+        <div>
+          <label for="username">Email</label>
+          <input type="email" id="username" formcontrolname="username" placeholder="Email address">
+        </div>
+      </div>
+      <div class="row full">
+        <div>
+          <label for="password">Password</label>
+          <input type="password" id="password" formcontrolname="password" placeholder="Password">
+        </div>
+      </div>
+    </section>
+
+    <section id="personal-section">
+      <h2>Step 2 — Personal details</h2>
+      <div class="row">
+        <div>
+          <label>First name</label>
+          <input type="text" formcontrolname="firstName" placeholder="First name">
+        </div>
+        <div>
+          <label>Last name</label>
+          <input type="text" formcontrolname="lastName" placeholder="Last name / Surname">
+        </div>
+      </div>
+      <div class="row full">
+        <div>
+          <label>Middle name</label>
+          <input type="text" formcontrolname="middleName" placeholder="Middle name">
+        </div>
+      </div>
+      <div class="row">
+        <div>
+          <label>Date of birth</label>
+          <input type="text" formcontrolname="dateOfBirth" placeholder="DD/MM/YYYY">
+        </div>
+        <div>
+          <label>Passport number</label>
+          <input type="text" formcontrolname="passportNumber" placeholder="Passport number">
+        </div>
+      </div>
+      <div class="row">
+        <div>
+          <label>Passport issue date</label>
+          <input type="text" formcontrolname="passportIssueDate" placeholder="Issue date">
+        </div>
+        <div>
+          <label>Passport expiry date</label>
+          <input type="text" formcontrolname="passportExpiryDate" placeholder="Expiry date">
+        </div>
+      </div>
+      <div class="row">
+        <div>
+          <label>Nationality</label>
+          <select formcontrolname="nationality">
+            <option value="">Select…</option>
+            <option>Belarusian</option>
+            <option>Polish</option>
+            <option>Russian</option>
+          </select>
+        </div>
+        <div>
+          <label>Gender</label>
+          <fieldset>
+            <label><input type="radio" name="gender" value="Male"> Male</label>
+            <label><input type="radio" name="gender" value="Female"> Female</label>
+          </fieldset>
+        </div>
+      </div>
+      <div class="row">
+        <div>
+          <label>Email</label>
+          <input type="email" formcontrolname="email" placeholder="Contact email">
+        </div>
+        <div>
+          <label>Mobile phone</label>
+          <input type="tel" formcontrolname="mobileNumber" placeholder="Phone / Mobile">
+        </div>
+      </div>
+    </section>
+
+    <section id="travel-section">
+      <h2>Step 3 — Travel information</h2>
+      <div class="row">
+        <div>
+          <label>I am applying from</label>
+          <div id="country-box" class="autocomplete-search-box">
+            <div class="input-wrapper">
+              <input class="search-input" placeholder="Select Country / Region" autocomplete="off">
+            </div>
+            <div class="selected-wrapper"><div class="selected">Select Country / Region</div></div>
+            <div class="toggle-button-wrapper"><div class="toggle-button">▼</div></div>
+            <div class="list-wrapper">
+              <ul>
+                <li><div class="text">🇧🇾 Belarus</div></li>
+                <li><div class="text">🇵🇱 Poland</div></li>
+                <li><div class="text">🇩🇪 Germany</div></li>
+                <li><div class="text">🇷🇺 Russia</div></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div>
+          <label>I am going to</label>
+          <div id="dest-box" class="autocomplete-search-box">
+            <div class="input-wrapper">
+              <input class="search-input" placeholder="Select Country" autocomplete="off">
+            </div>
+            <div class="selected-wrapper"><div class="selected">Select Country</div></div>
+            <div class="toggle-button-wrapper"><div class="toggle-button">▼</div></div>
+            <div class="list-wrapper">
+              <ul>
+                <li><div class="text">🇵🇱 Poland</div></li>
+                <li><div class="text">🇩🇪 Germany</div></li>
+                <li><div class="text">🇫🇷 France</div></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="documents-section">
+      <h2>Step 4 — Documents &amp; consent</h2>
+      <div class="row full">
+        <div>
+          <label>Passport photo</label>
+          <input type="file" formcontrolname="passportPhoto" accept="image/*">
+        </div>
+      </div>
+      <div class="row full">
+        <div>
+          <label>Additional document</label>
+          <input type="file" formcontrolname="additionalDocument">
+        </div>
+      </div>
+      <div class="check-row">
+        <label>
+          <input type="checkbox" formcontrolname="agreeToTerms">
+          I agree to the terms and conditions
+        </label>
+      </div>
+      <div class="check-row">
+        <label>
+          <input type="checkbox" formcontrolname="agreePrivacyPolicy">
+          I have read the privacy policy
+        </label>
+      </div>
+      <div class="check-row">
+        <label>
+          <input type="checkbox" formcontrolname="subscribeNewsletter">
+          Subscribe to newsletter
+        </label>
+      </div>
+    </section>
+
+  </main>
+  <script>
+    function wireAutocomplete(boxId) {
+      const box = document.getElementById(boxId);
+      const input = box.querySelector('.search-input');
+      const sel = box.querySelector('.selected');
+      const list = box.querySelector('.list-wrapper');
+      const toggle = box.querySelector('.toggle-button-wrapper');
+      function open() { list.classList.add('open'); input.focus(); }
+      function close() { list.classList.remove('open'); }
+      toggle.addEventListener('click', () => list.classList.contains('open') ? close() : open());
+      input.addEventListener('input', () => {
+        const v = input.value.toLowerCase();
+        for (const li of list.querySelectorAll('li')) {
+          const t = li.querySelector('.text').textContent.toLowerCase();
+          li.style.display = t.includes(v) ? '' : 'none';
+        }
+      });
+      list.addEventListener('click', (ev) => {
+        const li = ev.target.closest('li');
+        if (!li) return;
+        const t = li.querySelector('.text').textContent.trim();
+        sel.textContent = t;
+        sel.classList.add('has-value');
+        input.value = t.replace(/^.\s/, '');
+        close();
+      });
+    }
+    wireAutocomplete('country-box');
+    wireAutocomplete('dest-box');
+  </script>
+</body>
+</html>

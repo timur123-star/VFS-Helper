@@ -1,0 +1,150 @@
+{
+  "start_url": "https://visa.vfsglobal.com/blr/ru/pol/login",
+
+  "user": {
+    "loginEmail": "applicant@example.com",
+    "loginPassword": "your-password-here",
+    "firstName": "Alexey",
+    "lastName": "Petrov",
+    "middleName": "Sergeevich",
+    "passportNumber": "MP1234567",
+    "dateOfBirth": "15/03/1995",
+    "passportIssueDate": "01/06/2018",
+    "passportExpiryDate": "01/06/2028",
+    "email": "applicant@example.com",
+    "phone": "+375291112233",
+    "nationality": "Belarusian",
+    "gender": "Male",
+    "country": "Belarus",
+    "destination": "Poland",
+    "agreeToTerms": true,
+    "agreePrivacyPolicy": true,
+    "subscribeNewsletter": false,
+    "passportPhoto": "uploads/passport-photo.png",
+    "additionalDocument": "uploads/supporting-document.txt"
+  },
+
+  "fields": {
+    "firstName": [
+      "input[formcontrolname='firstName']",
+      "input[ng-reflect-name='firstName']",
+      "input[name='firstName']",
+      "input[placeholder*='Имя' i]",
+      "input[placeholder*='First' i]"
+    ],
+    "lastName": [
+      "input[formcontrolname='lastName']",
+      "input[formcontrolname='surname']",
+      "input[name='lastName']",
+      "input[placeholder*='Фамилия' i]",
+      "input[placeholder*='Last' i]",
+      "input[placeholder*='Surname' i]"
+    ],
+    "middleName": [
+      "input[formcontrolname='middleName']",
+      "input[placeholder*='Отчество' i]",
+      "input[placeholder*='Middle' i]"
+    ],
+    "passportNumber": [
+      "input[formcontrolname='passportNumber']",
+      "input[placeholder*='Паспорт' i]",
+      "input[placeholder*='Passport' i]"
+    ],
+    "dateOfBirth": [
+      "input[formcontrolname='dateOfBirth']",
+      "input[formcontrolname='dob']",
+      "input[placeholder*='рождения' i]",
+      "input[placeholder*='Birth' i]",
+      "input[placeholder*='DD/MM' i]"
+    ],
+    "passportIssueDate": [
+      "input[formcontrolname='passportIssueDate']",
+      "input[placeholder*='выдачи' i]",
+      "input[placeholder*='Issue' i]"
+    ],
+    "passportExpiryDate": [
+      "input[formcontrolname='passportExpiryDate']",
+      "input[placeholder*='Expiry' i]",
+      "input[placeholder*='действителен' i]"
+    ],
+    "email": [
+      "input[formcontrolname='email']",
+      "input[formcontrolname='emailId']",
+      "input[type='email']:not([formcontrolname='username'])"
+    ],
+    "phone": [
+      "input[formcontrolname='mobileNumber']",
+      "input[formcontrolname='phone']",
+      "input[type='tel']",
+      "input[placeholder*='Телефон' i]",
+      "input[placeholder*='Phone' i]"
+    ],
+    "nationality": [
+      "select[formcontrolname='nationality']",
+      "mat-select[formcontrolname='nationality']"
+    ],
+    "gender": [
+      "input[type='radio'][name='gender']",
+      "mat-select[formcontrolname='gender']"
+    ],
+    "country": [
+      "input.search-input[placeholder='Select Country / Region']",
+      "input[placeholder='Select Country / Region']"
+    ],
+    "destination": [
+      "input.search-input[placeholder='Select Country']",
+      "input[placeholder='Select Country']"
+    ],
+    "agreeToTerms": [
+      "input[type='checkbox'][formcontrolname='agreeToTerms']"
+    ],
+    "agreePrivacyPolicy": [
+      "input[type='checkbox'][formcontrolname='agreePrivacyPolicy']"
+    ],
+    "subscribeNewsletter": [
+      "input[type='checkbox'][formcontrolname='subscribeNewsletter']"
+    ],
+    "passportPhoto": [
+      "input[type='file'][formcontrolname='passportPhoto']"
+    ],
+    "additionalDocument": [
+      "input[type='file'][formcontrolname='additionalDocument']"
+    ]
+  },
+
+  "profiles": {
+    "login": {
+      "loginEmail": [
+        "input[formcontrolname='username']",
+        "input[formcontrolname='emailId']",
+        "input[type='email']"
+      ],
+      "loginPassword": [
+        "input[formcontrolname='password']",
+        "input[type='password']"
+      ]
+    },
+    "applicant": {
+      "firstName": ["input[formcontrolname='firstName']"],
+      "lastName": ["input[formcontrolname='lastName']"],
+      "middleName": ["input[formcontrolname='middleName']"],
+      "passportNumber": ["input[formcontrolname='passportNumber']"],
+      "dateOfBirth": ["input[formcontrolname='dateOfBirth']"],
+      "email": ["input[formcontrolname='email']"],
+      "phone": ["input[formcontrolname='mobileNumber']"]
+    }
+  },
+
+  "browser": {
+    "channel": "",
+    "headless": false,
+    "viewport": { "width": 960, "height": 1070 },
+    "user_data_dir": "browser_profile_demo",
+    "locale": "ru-RU"
+  },
+
+  "typing": {
+    "simulate_human": true,
+    "keystroke_delay_ms": 28
+  }
+}

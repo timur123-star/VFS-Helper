@@ -1,0 +1,26 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+config.json
+config.demo.json
+browser_profile/
+browser_profile_demo/
+/screenshots/
+dumps/
+logs/
+*.log
+cookies/vfs-real-session.json
+
+.pytest_cache/
+
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Large generated media (use docs/screenshots in README instead)
+artifacts/*.mp4
+artifacts/*.webm

@@ -1,0 +1,207 @@
+{
+  "_comment": "Skeleton config. Run 'python vfs_helper.py --setup' to fill personal data.",
+
+  "start_url": "https://visa.vfsglobal.com/blr/ru/pol/login",
+
+  "user": {
+    "firstName": "Ivan",
+    "lastName": "Ivanov",
+    "middleName": "Ivanovich",
+    "passportNumber": "AB1234567",
+    "dateOfBirth": "15/01/1990",
+    "passportIssueDate": "01/01/2020",
+    "passportExpiryDate": "01/01/2030",
+    "email": "ivan.ivanov@example.com",
+    "phone": "+375291234567",
+    "nationality": "Belarusian",
+    "gender": "Male",
+    "country": "Belarus",
+    "destination": "Poland",
+    "loginEmail": "ivan.ivanov@example.com",
+    "loginPassword": "REPLACE_WITH_YOUR_PASSWORD",
+
+    "agreeToTerms": true,
+    "agreePrivacyPolicy": true,
+    "subscribeNewsletter": false,
+
+    "passportPhoto": "uploads/passport-photo.jpg",
+    "additionalDocument": "uploads/supporting-document.pdf"
+  },
+
+  "fields": {
+    "firstName": [
+      "input[formcontrolname='firstName']",
+      "input[ng-reflect-name='firstName']",
+      "input[name='firstName']",
+      "input[id*='firstName' i]",
+      "input[placeholder*='Имя' i]",
+      "input[placeholder*='First' i]"
+    ],
+    "lastName": [
+      "input[formcontrolname='lastName']",
+      "input[formcontrolname='surname']",
+      "input[ng-reflect-name='lastName']",
+      "input[name='lastName']",
+      "input[name='surname']",
+      "input[id*='lastName' i]",
+      "input[placeholder*='Фамилия' i]",
+      "input[placeholder*='Last' i]",
+      "input[placeholder*='Surname' i]"
+    ],
+    "middleName": [
+      "input[formcontrolname='middleName']",
+      "input[formcontrolname='middlename']",
+      "input[name='middleName']",
+      "input[placeholder*='Отчество' i]",
+      "input[placeholder*='Middle' i]"
+    ],
+    "passportNumber": [
+      "input[formcontrolname='passportNumber']",
+      "input[formcontrolname='passport']",
+      "input[name='passportNumber']",
+      "input[id*='passport' i]",
+      "input[placeholder*='Паспорт' i]",
+      "input[placeholder*='Passport' i]"
+    ],
+    "dateOfBirth": [
+      "input[formcontrolname='dateOfBirth']",
+      "input[formcontrolname='dob']",
+      "input[name='dateOfBirth']",
+      "input[id*='birth' i]",
+      "input[placeholder*='рождения' i]",
+      "input[placeholder*='Birth' i]",
+      "input[placeholder*='DD/MM/YYYY' i]"
+    ],
+    "passportIssueDate": [
+      "input[formcontrolname='passportIssueDate']",
+      "input[formcontrolname='issueDate']",
+      "input[placeholder*='выдачи' i]",
+      "input[placeholder*='Issue' i]"
+    ],
+    "passportExpiryDate": [
+      "input[formcontrolname='passportExpiryDate']",
+      "input[formcontrolname='expiryDate']",
+      "input[placeholder*='действителен' i]",
+      "input[placeholder*='Expiry' i]"
+    ],
+    "email": [
+      "input[formcontrolname='email']",
+      "input[formcontrolname='emailId']",
+      "input[type='email']",
+      "input[name='email']",
+      "input[id*='email' i]"
+    ],
+    "phone": [
+      "input[formcontrolname='mobileNumber']",
+      "input[formcontrolname='phone']",
+      "input[formcontrolname='contactNumber']",
+      "input[type='tel']",
+      "input[name='phone']",
+      "input[name='mobile']",
+      "input[placeholder*='Телефон' i]",
+      "input[placeholder*='Phone' i]",
+      "input[placeholder*='Mobile' i]"
+    ],
+    "nationality": [
+      "mat-select[formcontrolname='nationality']",
+      "mat-select[formcontrolname='nationalityCode']",
+      "select[formcontrolname='nationality']",
+      "select[name='nationality']"
+    ],
+    "gender": [
+      "mat-select[formcontrolname='gender']",
+      "input[type='radio'][name='gender']",
+      "select[formcontrolname='gender']",
+      "select[name='gender']"
+    ],
+    "country": [
+      "input.search-input[placeholder='Select Country / Region']",
+      "input[placeholder='Select Country / Region']"
+    ],
+    "destination": [
+      "input.search-input[placeholder='Select Country']",
+      "input[placeholder='Select Country']"
+    ],
+    "agreeToTerms": [
+      "input[type='checkbox'][formcontrolname='agreeToTerms']",
+      "input[type='checkbox'][name='agreeToTerms']",
+      "input[type='checkbox'][id*='terms' i]"
+    ],
+    "agreePrivacyPolicy": [
+      "input[type='checkbox'][formcontrolname='agreePrivacyPolicy']",
+      "input[type='checkbox'][name*='privacy' i]"
+    ],
+    "subscribeNewsletter": [
+      "input[type='checkbox'][formcontrolname='subscribeNewsletter']",
+      "input[type='checkbox'][name*='newsletter' i]"
+    ],
+    "passportPhoto": [
+      "input[type='file'][formcontrolname='passportPhoto']",
+      "input[type='file'][name*='photo' i]",
+      "input[type='file'][accept*='image' i]"
+    ],
+    "additionalDocument": [
+      "input[type='file'][formcontrolname='additionalDocument']",
+      "input[type='file'][name*='document' i]"
+    ]
+  },
+
+  "profiles": {
+    "login": {
+      "loginEmail": [
+        "input[formcontrolname='username']",
+        "input[formcontrolname='emailId']",
+        "input[type='email']"
+      ],
+      "loginPassword": [
+        "input[formcontrolname='password']",
+        "input[type='password']",
+        "input[name='password']"
+      ]
+    },
+    "applicant": {
+      "firstName": [
+        "input[formcontrolname='firstName']",
+        "input[formcontrolname='givenName']"
+      ],
+      "lastName": [
+        "input[formcontrolname='lastName']",
+        "input[formcontrolname='surname']"
+      ]
+    },
+    "blr-pol": {
+      "_note": "Belarus -> Poland profile (start_url default).",
+      "nationality": [
+        "mat-select[formcontrolname='nationality']"
+      ]
+    },
+    "blr-deu": {
+      "_note": "Belarus -> Germany profile. Override start_url externally.",
+      "nationality": [
+        "mat-select[formcontrolname='nationality']"
+      ]
+    },
+    "rus-pol": {
+      "_note": "Russia -> Poland profile (visa.vfsglobal.com/rus/ru/pol/...)."
+    },
+    "rus-deu": {
+      "_note": "Russia -> Germany profile."
+    },
+    "ukr-pol": {
+      "_note": "Ukraine -> Poland profile."
+    }
+  },
+
+  "browser": {
+    "headless": false,
+    "viewport": { "width": 1366, "height": 900 },
+    "user_data_dir": "browser_profile",
+    "locale": "ru-RU",
+    "channel": "chrome"
+  },
+
+  "typing": {
+    "simulate_human": true,
+    "keystroke_delay_ms": 30
+  }
+}
